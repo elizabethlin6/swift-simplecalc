@@ -4,9 +4,11 @@ print("Welcome to the UW Calculator Playground")
 
 func calculate(_ args: [String]) -> Int {
     let args_size = args.count - 1
+    // single value array
     if (args.count == 1) {
         return 0
     }
+    // handle fact, avg, count arrays
     switch args[args_size] {
         case "fact":
             let factorial = Int(args[0]) ?? -1
@@ -30,6 +32,7 @@ func calculate(_ args: [String]) -> Int {
             break
     }
     
+    // arithmetic operations
     for _ in args {
         let n1 = Int(args[0]) ?? 1
         let n2 = Int(args[2]) ?? 1
